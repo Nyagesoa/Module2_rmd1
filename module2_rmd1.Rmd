@@ -3,9 +3,9 @@ title: "Module 2- RMarkdown Document 1"
 author: "Nyagesoa"
 date: "8/19/2020"
 output:
+  html_document: default
   pdf_document: default
   word_document: default
-  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -83,9 +83,6 @@ Here is an example of code in a blockquote:
 >     2+2
 >     mean(c(1,2,3,4,5))
 
-
-
-
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r cars}
@@ -101,3 +98,22 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r pressure2, fig.height=4, fig.width=4}
+plot(pressure)
+```
+
+## Insert Tables
+
+```{r}
+knitr::kable(head(cars),
+             caption = "Top 6 rows of cars Dataset")
+```
+
+## Insert an equation
+
+$$ Y = \beta_0 + \beta_1x $$
+
+
+
+
